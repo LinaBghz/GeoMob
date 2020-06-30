@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projettdm_boughazi_bounsiar.data.Country
 import com.example.projettdm_boughazi_bounsiar.data.CountryDAO
 import com.example.projettdm_boughazi_bounsiar.data.CountryDB
+import com.example.projettdm_boughazi_bounsiar.data.Figure
+import com.example.projettdm_boughazi_bounsiar.data.Relations.CountryFigures
 import com.example.projettdm_boughazi_bounsiar.data.Relations.CountryImages
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,13 +18,15 @@ class MainActivity : AppCompatActivity() {
     private var db: CountryDB? = null
     private var dao: CountryDAO? = null
     private var countries: MutableList<Country>? = null
+    private var figures: MutableList<CountryFigures>? = null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
       recycler.layoutManager = LinearLayoutManager(this)
-        initDB()
+              initDB()
 
     }
 
@@ -35,8 +39,11 @@ class MainActivity : AppCompatActivity() {
                 act.dao = db?.CountryDAO()
                 countries = act.dao?.getCountries()
 
+                figures = act.dao?.FiguresOfCountry()
+
                 Log.d("log", countries?.get(0)?.nom)
 
+                Log.d("log", figures?.get(0)?.figures?.get(0)?.nom)
                 return null
             }
 

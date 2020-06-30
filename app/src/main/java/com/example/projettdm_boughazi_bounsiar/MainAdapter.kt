@@ -25,6 +25,8 @@ class MainAdapter(val homeFeed: List<Country>) : RecyclerView.Adapter<CustomView
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val country = homeFeed.get(position)
 
+
+
      var countryImage = holder.view?.main_country_image
         countryImage.setImageResource(country.mainImage)
     }

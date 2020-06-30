@@ -17,4 +17,11 @@ data class Video(
 ){
     constructor():this("","",0, 0){
     }
+
+    fun prepopulateVideo() : List<Video>{
+
+        var videos : List<Video> = listOf(Video())
+        return videos
+
+    }
 }

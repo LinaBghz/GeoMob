@@ -3,6 +3,7 @@ package com.example.projettdm_boughazi_bounsiar.data
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.projettdm_boughazi_bounsiar.R
 
 
 @Entity
@@ -13,5 +14,13 @@ data class Image(
 
 ){
     constructor():this(0, 0, ""){
+    }
+
+
+    fun prepopulateImage() : List<Image>{
+
+        var images : List<Image> = listOf(Image())
+        return images
+
     }
 }

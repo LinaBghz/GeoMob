@@ -21,7 +21,9 @@ interface CountryDAO{
     fun ajouterCountry(country : Country)
 
     @Insert
-    fun insertAll(countries : List<Country>)
+    fun insertAllCountries(countries : List<Country>)
+
+
 
     @Update
     fun modifierCountry(country : Country)
@@ -30,15 +32,37 @@ interface CountryDAO{
     fun supprimerCountry(country : Country)
 
 
+    //images
+    @Query("SELECT * FROM Image")
+    fun getImages(): MutableList<Image>
+
+    @Query("SELECT * FROM Image WHERE codeImage = :code")
+    fun getImage(code: Int): Image
+
+    @Insert
+    fun ajouterImage(image: Image)
+
+    @Insert
+    fun insertAllImages(images : List<Image>)
+
+    @Update
+    fun modifierImage(image: Image)
+
+    @Delete
+    fun supprimerImage(image: Image)
+
     //figures
     @Query("SELECT * FROM Figure")
-    fun getFigure(): MutableList<Figure>
+    fun getFigures(): MutableList<Figure>
 
     @Query("SELECT * FROM Figure WHERE codeFigure = :code")
-    fun getFigure(code: Int): List<Figure>
+    fun getFigure(code: Int): Figure
 
     @Insert
     fun ajouterFigure(figure : Figure)
+
+    @Insert
+    fun insertAllFigures(figures : List<Figure>)
 
     @Update
     fun modifierFigure(figure : Figure)
@@ -50,13 +74,16 @@ interface CountryDAO{
 
     //videos
     @Query("SELECT * FROM Video")
-    fun getVideo(): MutableList<Video>
+    fun getVideos(): MutableList<Video>
 
     @Query("SELECT * FROM Video WHERE urlVideo = :url")
-    fun getVideo(url: String): List<Video>
+    fun getVideo(url: String): Video
 
     @Insert
     fun ajouterVideo(video : Video)
+
+    @Insert
+    fun insertAllVideos(videos : List<Video>)
 
     @Update
     fun modifierVideo(video : Video)
@@ -67,13 +94,16 @@ interface CountryDAO{
 
     //tweets
     @Query("SELECT * FROM Tweet")
-    fun getTweet(): MutableList<Tweet>
+    fun getTweets(): MutableList<Tweet>
 
     @Query("SELECT * FROM Tweet WHERE urlTweet= :url")
-    fun getTweet(url: String): List<Tweet>
+    fun getTweet(url: String): Tweet
 
     @Insert
     fun ajouterTweet(tweet : Tweet)
+
+    @Insert
+    fun insertAllTweets(tweets : List<Tweet>)
 
     @Update
     fun modifierTweet(tweet : Tweet)
@@ -85,19 +115,19 @@ interface CountryDAO{
 
     @Transaction
     @Query("SELECT * FROM Country")
-    fun FiguresOfCountry(): List<CountryFigures>
+    fun FiguresOfCountry(): MutableList<CountryFigures>
 
     @Transaction
     @Query("SELECT * FROM Country")
-    fun ImagesOfCountry(): List<CountryImages>
+    fun ImagesOfCountry(): MutableList<CountryImages>
 
     @Transaction
     @Query("SELECT * FROM Country")
-    fun TweetsOfCountry(): List<CountryTweets>
+    fun TweetsOfCountry(): MutableList<CountryTweets>
 
     @Transaction
     @Query("SELECT * FROM Country")
-    fun VideosOfCountry(): List<CountryVideos>
+    fun VideosOfCountry(): MutableList<CountryVideos>
 
 
 

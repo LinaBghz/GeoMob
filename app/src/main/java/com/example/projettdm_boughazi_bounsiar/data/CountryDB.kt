@@ -33,7 +33,12 @@ abstract class CountryDB() : RoomDatabase(){
                         super.onCreate(db)
                         Executors.newSingleThreadScheduledExecutor()
                             .execute(Runnable {
-                                getInstance(context)?.CountryDAO()?.insertAll(Country().prepopulateCountry())
+                                getInstance(context)?.CountryDAO()?.insertAllCountries(Country().prepopulateCountry())
+                                getInstance(context)?.CountryDAO()?.insertAllFigures(Figure().prepopulateFigure())
+                                getInstance(context)?.CountryDAO()?.insertAllImages(Image().prepopulateImage())
+                                getInstance(context)?.CountryDAO()?.insertAllTweets(Tweet().prepopulateTweet())
+                                getInstance(context)?.CountryDAO()?.insertAllVideos(Video().prepopulateVideo())
+
                             })
                     }
                 })
