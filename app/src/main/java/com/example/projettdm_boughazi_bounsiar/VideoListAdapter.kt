@@ -10,7 +10,7 @@ import android.widget.TextView
 import com.example.projettdm_boughazi_bounsiar.data.Figure
 import com.example.projettdm_boughazi_bounsiar.data.Video
 
-class VideoListAdapter(var context : Context?, var videos : MutableList<Video>): BaseAdapter() {
+class VideoListAdapter(var context : Context?, var videos : List<Video>): BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val layoutInflater = LayoutInflater.from(context)

@@ -1,13 +1,15 @@
 package com.example.projettdm_boughazi_bounsiar.data
 
 import android.graphics.Bitmap
+import android.os.Parcelable
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
 
-
+@Parcelize
 @Entity
 data class Country(
     @PrimaryKey var code : Int,
@@ -24,7 +26,7 @@ data class Country(
     @ColumnInfo(name = "tweets") var tweets : List<Tweet>?
 
 
-    ){
+    ) : Parcelable {
     constructor():this(0,"", "", "", "",0, null, 0 ,
         "", null, null , null ){
 

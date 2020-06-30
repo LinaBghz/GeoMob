@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.projettdm_boughazi_bounsiar.data.Figure
 
-class FigureListAdapter(var context : Context?, var figures : MutableList<Figure>): BaseAdapter() {
+class FigureListAdapter(var context : Context?, var figures : List<Figure>): BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val layoutInflater = LayoutInflater.from(context)
