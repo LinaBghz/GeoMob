@@ -1,0 +1,2 @@
+rootProject.name='ProjetTDM_Boughazi_Bounsiar'
+include ':app'
