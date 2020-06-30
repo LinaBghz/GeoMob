@@ -118,7 +118,7 @@ interface CountryDAO{
     fun FiguresOfCountry(): MutableList<CountryFigures>
 
     @Transaction
-    @Query("SELECT * FROM Country")
+    @Query("SELECT * FROM Country ")
     fun ImagesOfCountry(): MutableList<CountryImages>
 
     @Transaction
@@ -126,7 +126,7 @@ interface CountryDAO{
     fun TweetsOfCountry(): MutableList<CountryTweets>
 
     @Transaction
-    @Query("SELECT * FROM Country")
+    @Query("SELECT * FROM Country ")
     fun VideosOfCountry(): MutableList<CountryVideos>
 
 

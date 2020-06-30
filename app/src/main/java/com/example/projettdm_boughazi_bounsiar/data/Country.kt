@@ -1,5 +1,6 @@
 package com.example.projettdm_boughazi_bounsiar.data
 
+import android.content.res.Resources
 import android.graphics.Bitmap
 
 import androidx.room.ColumnInfo
@@ -28,8 +29,9 @@ data class Country(
 
     fun prepopulateCountry() : List<Country>{
 
-        var countries : List<Country> = listOf(Country(213, "Alger",  R.string.description_alger.toString() , "2 381 740 KM2" ,"34 586 184" , R.string.historique_alger.toString(), R.drawable.alger,
-            0, R.string.ressources_alger.toString(), R.drawable.algermain))
+        var countries : List<Country> = listOf(Country(213, "Alger",R.string.description_alger.toString()  , "2 381 740 KM2" ,"34 586 184" , R.string.historique_alger.toString(), R.drawable.alger,
+        R.raw.idir,R.string.ressources_alger.toString() , R.drawable.algermain))
+
         return countries
 
     }

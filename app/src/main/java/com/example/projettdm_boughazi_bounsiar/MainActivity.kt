@@ -39,11 +39,6 @@ class MainActivity : AppCompatActivity() {
                 act.dao = db?.CountryDAO()
                 countries = act.dao?.getCountries()
 
-                figures = act.dao?.FiguresOfCountry()
-
-                Log.d("log", countries?.get(0)?.nom)
-
-                Log.d("log", figures?.get(0)?.figures?.get(0)?.nom)
                 return null
             }
 

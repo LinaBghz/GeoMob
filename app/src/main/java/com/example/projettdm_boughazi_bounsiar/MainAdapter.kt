@@ -29,6 +29,7 @@ class MainAdapter(val homeFeed: List<Country>) : RecyclerView.Adapter<CustomView
 
      var countryImage = holder.view?.main_country_image
         countryImage.setImageResource(country.mainImage)
+        holder.country = country
     }
 }
 

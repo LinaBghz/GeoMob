@@ -19,7 +19,7 @@ data class Image(
 
     fun prepopulateImage() : List<Image>{
 
-        var images : List<Image> = listOf(Image())
+        var images : List<Image> = listOf(Image( R.drawable.placeholder, 213,"image" ), Image(R.drawable.algermain, 213, "landscape"))
         return images
 
     }
