@@ -29,8 +29,13 @@ data class Country(
 
     fun prepopulateCountry() : List<Country>{
 
-        var countries : List<Country> = listOf(Country(213, "Alger",R.string.description_alger.toString()  , "2 381 740 KM2" ,"34 586 184" , R.string.historique_alger.toString(), R.drawable.alger,
-        R.raw.idir,R.string.ressources_alger.toString() , R.drawable.algermain))
+        var countries : List<Country> = listOf(Country(213, "Alger",R.string.description_alger.toString()  , "2 381 740 KM2" ,"34 586 184" ,"1152\n" +
+                "     toutes les forces locales sont définitivement vaincues par une nouvelle dynastie berbère, les Almohades, dirigés par Abdelmoumen Ibn Ali et dont le chef spirituel est Ibn Toumert", R.drawable.alger,
+            R.raw.idir,"Selon les données du ministère des Ressources en eau, l’Algérie compte 50 barrages en exploitation, 11 sont en cours de réalisation et 50 autres barrages à l’étude. Ces derniers devraient être réalisés avant 2020" , R.drawable.algermain),
+
+            Country(123, "Alger",R.string.description_alger.toString()  , "2 381 740 KM2" ,"34 586 184" ,
+                "1152\n toutes les forces locales sont définitivement vaincues par une nouvelle dynastie berbère, les Almohades, dirigés par Abdelmoumen Ibn Ali et dont le chef spirituel est Ibn Toumert", R.drawable.alger,
+                R.raw.idir,"Selon les données du ministère des Ressources en eau, l’Algérie compte 50 barrages en exploitation, 11 sont en cours de réalisation et 50 autres barrages à l’étude. Ces derniers devraient être réalisés avant 2020" , R.drawable.algermain))
 
         return countries
 

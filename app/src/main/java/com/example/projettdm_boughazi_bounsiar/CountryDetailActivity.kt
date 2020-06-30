@@ -53,6 +53,7 @@ class CountryDetailActivity : AppCompatActivity() {
 
                 if (country != null) {
 
+
                     for (figureCountry in dao?.FiguresOfCountry()) {
 
                         if (figureCountry.country.codeCountry == code) {
@@ -129,13 +130,13 @@ class CountryDetailActivity : AppCompatActivity() {
 
 
                         //videos listview setup
-                        val videoList = videos
-                        videosListAdapter = VideoListAdapter(act, videoList!!)
+
+                        videosListAdapter = VideoListAdapter(act, videos!!)
                         vid_pop_list_view.setOnItemClickListener { parent, view, position, id ->
                             startActivity(
                                 Intent(
                                     Intent.ACTION_VIEW,
-                                    Uri.parse(videoList[position].urlVideo)
+                                    Uri.parse(videos.get(position).urlVideo)
                                 )
                             )
                         }

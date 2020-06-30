@@ -1,6 +1,7 @@
 package com.example.projettdm_boughazi_bounsiar.data
 
 
+import android.util.Log
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -20,9 +21,10 @@ data class Video(
 
     fun prepopulateVideo() : List<Video>{
 
-        var videos : List<Video> = listOf(Video("https://www.youtube.com/watch?v=Atvsg_zogxo","Noice MV",
-            R.drawable.placeholder, 213),Video("https://www.youtube.com/watch?v=Atvsg_zogxo","Another one",
-            R.drawable.placeholder, 213))
+        var videos : List<Video> = listOf(Video("https://www.youtube.com/watch?v=Atvsg_zogxo", "video title", R.drawable.alger, 213),
+            Video("https://www.youtube.com/watch?v=D1PvIWdJ8xo","Another one",R.drawable.placeholder, 213),
+            Video("https://www.youtube.com/watch?v=R3Fwdnij49o","Another one",R.drawable.placeholder, 123))
+
         return videos
 
     }

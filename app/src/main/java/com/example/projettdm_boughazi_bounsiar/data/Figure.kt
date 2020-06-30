@@ -22,7 +22,8 @@ data class Figure(
     fun prepopulateFigure() : List<Figure>{
 
         var figures : List<Figure> = listOf(Figure( 1 , "Ben Bella", "Ahmed", "Président de la République algérienne démocratique et populaire",
-            R.drawable.benbella, 213))
+            R.drawable.benbella, 213) ,
+        Figure(2,"Obama","Barak","Ex US president",R.drawable.placeholder, 213))
         return figures
 
     }

@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 act.dao = db?.CountryDAO()
                 countries = act.dao?.getCountries()
 
+
                 return null
             }
 
