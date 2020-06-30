@@ -2,6 +2,7 @@ package com.example.projettdm_boughazi_bounsiar.data
 
 
 import androidx.room.*
+import com.example.projettdm_boughazi_bounsiar.data.Relations.CountryFigures
 
 @Dao
 interface CountryDAO{
@@ -10,7 +11,7 @@ interface CountryDAO{
     @Query("SELECT * FROM country")
     fun getCountry(): MutableList<Country>
 
-    @Query("SELECT * FROM country WHERE code = :code")
+    @Query("SELECT * FROM country WHERE codeCountry = :code")
     fun getCountry(code: Int): List<Country>
 
     @Insert
@@ -26,7 +27,7 @@ interface CountryDAO{
     @Query("SELECT * FROM Figure")
     fun getFigure(): MutableList<Figure>
 
-    @Query("SELECT * FROM Figure WHERE code = :code")
+    @Query("SELECT * FROM Figure WHERE codeFigure = :code")
     fun getFigure(code: Int): List<Figure>
 
     @Insert
@@ -44,7 +45,7 @@ interface CountryDAO{
     @Query("SELECT * FROM Video")
     fun getVideo(): MutableList<Video>
 
-    @Query("SELECT * FROM Video WHERE url = :url")
+    @Query("SELECT * FROM Video WHERE urlVideo = :url")
     fun getVideo(url: String): List<Video>
 
     @Insert
@@ -61,7 +62,7 @@ interface CountryDAO{
     @Query("SELECT * FROM Tweet")
     fun getTweet(): MutableList<Tweet>
 
-    @Query("SELECT * FROM Tweet WHERE url = :url")
+    @Query("SELECT * FROM Tweet WHERE urlTweet= :url")
     fun getTweet(url: String): List<Tweet>
 
     @Insert
@@ -72,5 +73,25 @@ interface CountryDAO{
 
     @Delete
     fun supprimerTweet(tweet : Tweet)
+
+    //Transactions
+
+    @Transaction
+    @Query("SELECT * FROM Country")
+    fun FiguresOfCountry(): List<CountryFigures>
+
+    @Transaction
+    @Query("SELECT * FROM Country")
+    fun ImagesOfCountry(): List<Image>
+
+    @Transaction
+    @Query("SELECT * FROM Country")
+    fun TweetsOfCountry(): List<Tweet>
+
+    @Transaction
+    @Query("SELECT * FROM Country")
+    fun VideosOfCountry(): List<Video>
+
+
 
 }

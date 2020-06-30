@@ -8,13 +8,14 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Figure(
-    @PrimaryKey var code : Int,
+    @PrimaryKey var codeFigure : Int,
     @ColumnInfo(name = "nom") var nom: String,
     @ColumnInfo(name = "prenom") var prenom: String,
     @ColumnInfo(name = "description") var description : String,
-    @ColumnInfo(name = "image") var image : Int
+    @ColumnInfo(name = "image") var image : Int,
+    @ColumnInfo(name= "country") var countryCode : Int
 
 ){
-    constructor():this(0,"","", "", 0 ){
+    constructor():this(0,"","", "", 0 , 0){
     }
 }

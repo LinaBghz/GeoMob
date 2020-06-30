@@ -8,11 +8,12 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Tweet(
-    @PrimaryKey var url : String,
+    @PrimaryKey var urlTweet : String,
     @ColumnInfo(name = "utilisateur") var utilisateur: String,
-    @ColumnInfo(name = "contenue") var contenue : String
+    @ColumnInfo(name = "contenue") var contenue : String,
+    @ColumnInfo(name= "country") var countryCode : Int
 
 ){
-    constructor():this("","",""){
+    constructor():this("","","", 0){
     }
 }
