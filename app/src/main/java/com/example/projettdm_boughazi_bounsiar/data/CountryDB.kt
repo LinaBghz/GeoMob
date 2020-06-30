@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = arrayOf(Country::class), version = 1)
+@Database(entities = arrayOf(Country::class, Figure::class, Image::class, Tweet::class, Video::class), version = 1)
 abstract class CountryDB() : RoomDatabase(){
     abstract fun CountryDAO() : CountryDAO
     companion object {

@@ -24,7 +24,7 @@ class MainAdapter(val homeFeed: List<Country>) : RecyclerView.Adapter<CustomView
         val country = homeFeed.get(position)
 
      var countryImage = holder.view?.country_image
-        country.images?.get(1)?.let { countryImage.setImageResource(it) }
+        //        country.images?.get(1)?.let { countryImage.setImageResource(it) }
     }
 }
 
@@ -35,7 +35,7 @@ class CustomViewHolder(val view: View, var country: Country? = null):RecyclerVie
     init {
         view.setOnClickListener {
             val intent = Intent(view.context, CountryDetailActivity::class.java)
-            intent.putExtra(COUNTRY_CODE, country?.code)
+            intent.putExtra(COUNTRY_CODE, country?.codeCountry)
             view.context.startActivity(intent)
         }
     }

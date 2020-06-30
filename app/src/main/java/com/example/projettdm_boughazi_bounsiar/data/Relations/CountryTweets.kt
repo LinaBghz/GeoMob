@@ -9,7 +9,7 @@ data class CountryTweets(
     @Embedded val country: Country,
     @Relation(
         parentColumn = "codeCountry",
-        entityColumn = "countryCode"
+        entityColumn = "country"
     )
     val tweets: List<Tweet>
 )
