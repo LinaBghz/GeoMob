@@ -71,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:text="Drapeau"
                         android:textAlignment="center"
-                        android:textSize="13sp" />
+                        android:textSize="14sp" />
 
                     <ImageView
                         android:id="@+id/glag_image_view"
@@ -95,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:text="Surface (km²)"
                         android:textAlignment="center"
-                        android:textSize="13sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/surface_tv"
@@ -123,7 +123,7 @@
                         android:layout_height="wrap_content"
                         android:text="Population"
                         android:textAlignment="center"
-                        android:textSize="13sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/population_tv"
@@ -150,6 +150,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
@@ -189,6 +190,7 @@
                     android:layout_marginStart="16dp"
                     android:text="Ecouter l'hymne nationale"
                     android:textColor="@android:color/black"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/play_hymne_btn"
                     app:layout_constraintTop_toTopOf="@+id/play_hymne_btn" />
 
@@ -198,7 +200,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="3:03"
-                    android:textSize="12sp"
+                    android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="@+id/textView6"
                     app:layout_constraintTop_toBottomOf="@+id/textView6" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -225,6 +227,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:text="TextView"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Historique"
@@ -251,6 +254,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:text="TextView"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/princip_res"
