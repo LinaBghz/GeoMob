@@ -3,6 +3,7 @@ package com.example.projettdm_boughazi_bounsiar
 import com.example.projettdm_boughazi_bounsiar.data.Country
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import kotlinx.android.synthetic.main.country_row.view.*
 
 class MainAdapter(val homeFeed: List<Country>) : RecyclerView.Adapter<CustomViewHolder>(){
     override fun getItemCount(): Int {
+        Log.d("number", homeFeed.count().toString())
         return homeFeed.count()
     }
 
@@ -23,8 +25,8 @@ class MainAdapter(val homeFeed: List<Country>) : RecyclerView.Adapter<CustomView
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val country = homeFeed.get(position)
 
-     var countryImage = holder.view?.country_image
-        //        country.images?.get(1)?.let { countryImage.setImageResource(it) }
+     var countryImage = holder.view?.main_country_image
+        countryImage.setImageResource(country.mainImage)
     }
 }
 

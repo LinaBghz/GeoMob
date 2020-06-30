@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">GeoMob</string>
+
+<!--    Algeria-->
+    <string name="description_alger">L\'Algérie est un pays nord-africain doté d\'un littoral sur la mer Méditerranée et d\'un intérieur désertique, le Sahara. De nombreux empires y ont laissé leur marque, comme les anciennes ruines romaines de Tipasa, en bord de mer. Dans la capitale, Alger, des sites ottomans, tels que la mosquée Ketchaoua, datant de 1612 environ, bordent le quartier de la Casbah. Perché sur une colline, cet endroit dispose d\'allées étroites et d\'escaliers. La basilique Notre-Dame d\'Afrique, arborant une architecture néo-byzantine, date de la domination coloniale française.</string>
+    <string name="historique_alger">1152
+     toutes les forces locales sont définitivement vaincues par une nouvelle dynastie berbère, les Almohades, dirigés par Abdelmoumen Ibn Ali et dont le chef spirituel est Ibn Toumert</string>
+    <string name="ressources_alger">Selon les données du ministère des Ressources en eau, l’Algérie compte 50 barrages en exploitation, 11 sont en cours de réalisation et 50 autres barrages à l’étude. Ces derniers devraient être réalisés avant 2020. </string>
 </resources>
