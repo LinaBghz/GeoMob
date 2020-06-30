@@ -8,26 +8,26 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.projettdm_boughazi_bounsiar.data.Figure
+import com.example.projettdm_boughazi_bounsiar.data.Video
 
-class FigureListAdapter(var context : Context?, var figures : MutableList<Figure>): BaseAdapter() {
+class VideoListAdapter(var context : Context?, var videos : MutableList<Video>): BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val layoutInflater = LayoutInflater.from(context)
-        val rowView = layoutInflater.inflate(R.layout.figure_list_item, parent, false)
-        val nameTV = rowView.findViewById<TextView>(R.id.figure_name)
-        val titleTV = rowView.findViewById<TextView>(R.id.figure_title)
-        val imageView = rowView.findViewById<ImageView>(R.id.video_thumbnail)
+        val rowView = layoutInflater.inflate(R.layout.video_list_item, parent, false)
+        val vidTitle = rowView.findViewById<TextView>(R.id.video_title)
+        val thumbnail = rowView.findViewById<ImageView>(R.id.video_thumbnail)
 
-        val current = figures[position]
-        nameTV.text = current.nom +" "+ current.prenom
-        titleTV.text = current.description
-        imageView.setImageResource(current.image)
+        val current = videos[position]
+
+        vidTitle.text = current.titre
+        thumbnail.setImageResource(current.image)
 
         return rowView
     }
 
     override fun getItem(position: Int): Any {
-        return  figures.get(position)
+        return  videos.get(position)
     }
 
     override fun getItemId(position: Int): Long {
@@ -35,7 +35,7 @@ class FigureListAdapter(var context : Context?, var figures : MutableList<Figure
     }
 
     override fun getCount(): Int {
-        return figures.count()
+        return videos.count()
     }
 
 }
