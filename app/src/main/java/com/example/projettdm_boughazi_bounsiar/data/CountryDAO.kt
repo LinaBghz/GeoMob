@@ -2,7 +2,7 @@ package com.example.projettdm_boughazi_bounsiar.data
 
 
 import androidx.room.*
-
+/*
 @Dao
 interface CountryDAO{
 
@@ -74,3 +74,4 @@ interface CountryDAO{
     fun supprimerTweet(tweet : Tweet)
 
 }
+ */
