@@ -221,6 +221,19 @@
             app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
         <TextView
+            android:id="@+id/line"
+            android:layout_width="12dp"
+            android:layout_height="5dp"
+            android:background="#3314E0"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Historique"
+            app:layout_constraintTop_toBottomOf="@+id/Historique"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
             android:id="@+id/historique_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -245,6 +258,20 @@
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/historique_tv" />
+
+
+        <TextView
+            android:id="@+id/line2"
+            android:layout_width="12dp"
+            android:layout_height="5dp"
+            android:background="#3314E0"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/princip_res"
+            app:layout_constraintTop_toBottomOf="@+id/princip_res"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/princip_ressources_tv"
@@ -272,15 +299,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/princip_ressources_tv" />
 
+
+        <TextView
+            android:id="@+id/line3"
+            android:layout_width="12dp"
+            android:layout_height="5dp"
+            android:background="#3314E0"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/princip_perso"
+            app:layout_constraintTop_toBottomOf="@+id/princip_perso"
+            app:layout_constraintVertical_bias="0.0" />
+
         <ListView
             android:id="@+id/perso_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:scrollbars="none"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/princip_perso" />
 
@@ -296,6 +337,20 @@
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/perso_list_view" />
+
+        <TextView
+            android:id="@+id/line4"
+            android:layout_width="12dp"
+            android:layout_height="5dp"
+            android:background="#3314E0"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Vid_pop_title"
+            app:layout_constraintTop_toBottomOf="@+id/Vid_pop_title"
+            app:layout_constraintVertical_bias="0.0" />
+
 
         <ListView
             android:id="@+id/vid_pop_list_view"
@@ -314,15 +369,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto_condensed_bold"
             android:text="Derniers tweets sur le pays"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vid_pop_list_view" />
+        <TextView
+            android:id="@+id/line5"
+            android:layout_width="12dp"
+            android:layout_height="5dp"
+            android:background="#3314E0"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/latest_tweets_title"
+            app:layout_constraintTop_toBottomOf="@+id/latest_tweets_title"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ListView
+            android:id="@+id/tweet_pop_list_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

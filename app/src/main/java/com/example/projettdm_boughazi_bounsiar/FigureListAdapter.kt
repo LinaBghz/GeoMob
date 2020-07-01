@@ -16,7 +16,7 @@ class FigureListAdapter(var context : Context?, var figures : MutableList<Figure
         val rowView = layoutInflater.inflate(R.layout.figure_list_item, parent, false)
         val nameTV = rowView.findViewById<TextView>(R.id.figure_name)
         val titleTV = rowView.findViewById<TextView>(R.id.figure_title)
-        val imageView = rowView.findViewById<ImageView>(R.id.video_thumbnail)
+        val imageView = rowView.findViewById<ImageView>(R.id.figure_picture)
 
         val current = figures[position]
         nameTV.text = current.nom +" "+ current.prenom

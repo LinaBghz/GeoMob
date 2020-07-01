@@ -22,6 +22,8 @@ class CountryDetailActivity : AppCompatActivity() {
     private var mp: MediaPlayer? = null
     private lateinit var figureListAdapter: FigureListAdapter
     private lateinit var videosListAdapter: VideoListAdapter
+    private lateinit var tweetsListAdapter: TweetListAdapter
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -137,11 +139,30 @@ class CountryDetailActivity : AppCompatActivity() {
                                 Intent(
                                     Intent.ACTION_VIEW,
                                     Uri.parse(videos.get(position).urlVideo)
+
                                 )
                             )
                         }
                         vid_pop_list_view.adapter = videosListAdapter
                         justifyListViewHeightBasedOnChildren(vid_pop_list_view)
+
+                        //tweets listview setup
+
+                        tweetsListAdapter = TweetListAdapter(act, tweets!!)
+                        tweet_pop_list_view.setOnItemClickListener{ parent, view, position, id ->
+                            startActivity(
+                                Intent(
+                                    Intent.ACTION_VIEW,
+                                    Uri.parse(tweets.get(position).urlTweet)
+                                )
+                            )
+
+                        }
+
+                        tweet_pop_list_view.adapter = tweetsListAdapter
+                        justifyListViewHeightBasedOnChildren(tweet_pop_list_view)
+
+
                     }
 
 
