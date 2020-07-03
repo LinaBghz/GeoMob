@@ -7,9 +7,11 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.View.MeasureSpec
 import android.view.ViewGroup
 import android.widget.ListAdapter
 import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
@@ -17,11 +19,12 @@ import com.example.projettdm_boughazi_bounsiar.data.*
 import kotlinx.android.synthetic.main.country_layout.*
 
 
+
+
 class CountryDetailActivity : AppCompatActivity() {
 
     private var mp: MediaPlayer? = null
     private lateinit var figureListAdapter: FigureListAdapter
-    private lateinit var videosListAdapter: VideoListAdapter
     private lateinit var tweetsListAdapter: TweetListAdapter
 
 
@@ -133,7 +136,7 @@ class CountryDetailActivity : AppCompatActivity() {
 
                         //videos listview setup
 
-                        videosListAdapter = VideoListAdapter(act, videos!!)
+                        var videosListAdapter = VideoListAdapter(act, videos!!)
                         vid_pop_list_view.setOnItemClickListener { parent, view, position, id ->
                             startActivity(
                                 Intent(
@@ -144,7 +147,7 @@ class CountryDetailActivity : AppCompatActivity() {
                             )
                         }
                         vid_pop_list_view.adapter = videosListAdapter
-                        justifyListViewHeightBasedOnChildren(vid_pop_list_view)
+                      justifyListViewHeightBasedOnChildren(vid_pop_list_view)
 
                         //tweets listview setup
 
@@ -160,7 +163,7 @@ class CountryDetailActivity : AppCompatActivity() {
                         }
 
                         tweet_pop_list_view.adapter = tweetsListAdapter
-                        justifyListViewHeightBasedOnChildren(tweet_pop_list_view)
+                      justifyListViewHeightBasedOnChildren(tweet_pop_list_view)
 
 
                     }
@@ -201,23 +204,25 @@ class CountryDetailActivity : AppCompatActivity() {
         val adapter: ListAdapter = listView.getAdapter() ?: return
         val vg: ViewGroup = listView
         var totalHeight = 0
-        for (i in 0 until adapter.getCount()) {
+        for (i in 0 until adapter.count) {
             val listItem: View = adapter.getView(i, null, vg)
             listItem.measure(0, 0)
             totalHeight += listItem.getMeasuredHeight()
+
         }
         val par: ViewGroup.LayoutParams = listView.getLayoutParams()
         if (listView == perso_list_view) {
-            totalHeight -= 50 * adapter.count
+            totalHeight -= 50 * adapter.getCount()
 
         } else if (listView == vid_pop_list_view) {
-            totalHeight -= 450* adapter.count
+            totalHeight -= 3000* adapter.getCount()
         }
         else {
-            totalHeight -= 50 * adapter.count
+            totalHeight -= 50 * adapter.getCount()
         }
-        par.height = totalHeight + listView.getDividerHeight() * (adapter.getCount() - 1)
+        par.height = totalHeight + listView.getDividerHeight() * (adapter.count - 1)
         listView.setLayoutParams(par)
         listView.requestLayout()
     }
+
 }
