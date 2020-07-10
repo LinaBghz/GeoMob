@@ -213,14 +213,17 @@ class CountryDetailActivity : AppCompatActivity() {
         val par: ViewGroup.LayoutParams = listView.getLayoutParams()
         if (listView == perso_list_view) {
             totalHeight -= 50 * adapter.getCount()
-
+            par.height = totalHeight + listView.getDividerHeight() * (adapter.count - 1)
         } else if (listView == vid_pop_list_view) {
-            totalHeight -= 3000* adapter.getCount()
+            totalHeight = 0
+            totalHeight = 700* adapter.getCount()
+            par.height = totalHeight + listView.getDividerHeight() * (adapter.count)
         }
         else {
             totalHeight -= 50 * adapter.getCount()
+            par.height = totalHeight + listView.getDividerHeight() * (adapter.count - 1)
         }
-        par.height = totalHeight + listView.getDividerHeight() * (adapter.count - 1)
+        //par.height = totalHeight + listView.getDividerHeight() * (adapter.count - 1)
         listView.setLayoutParams(par)
         listView.requestLayout()
     }
